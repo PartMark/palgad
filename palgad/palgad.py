@@ -19,8 +19,9 @@
 
 #Iseseisevtöö "Registreerimine ja autoriseerimine"
 from module1 import *
-nimed = []
-paroolid = []
+nimed=[]
+paroolid=[]
+
 while True:
     print("\nValige tegevus:")
     print("1. Registreerimine")
@@ -47,7 +48,6 @@ while True:
     elif vastus==3:
         pass
     elif vastus==4:
-
         pass
     elif vastus==5:
         print("Programm lõpetatakse.")

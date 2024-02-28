@@ -55,17 +55,17 @@
 
 #Iseseisevtöö "Registreerimine ja autoriseerimine"
 
-def registreerimine(nimed, paroolid):
-    nimi = input("Sisesta kasutajanimi: ")
+def registreerimine(nimed,paroolid):
+    nimi=input("Sisesta kasutajanimi: ")
     if nimi in nimed:
         print("Kasutajanimi on juba võetud!")
         return
-    valik = input("Kas soovite luua endale parooli (jah/ei)? ").lower()
-    if valik == "jah":
-        parool = input("Sisesta parool: ")
+    vastus=input("Kas soovite luua endale parooli (jah/ei)? ").lower()
+    if vastus=="jah":
+        parool=input("Sisesta parool: ")
     else:
-        parool = salasona(12)
-        print("Teie automaatselt genereeritud parool on:", parool)
+        parool=salasona(12)
+        print("Teie automaatselt genereeritud parool on: ",parool)
     nimed.append(nimi)
     paroolid.append(parool)
     print("Kasutaja registreeritud edukalt!")
@@ -73,10 +73,10 @@ import random
 import string
 
 def salasona(k: int):
-    sala = ""
+    sala=""
     for i in range(k):
-        t = random.choice(string.ascii_letters)
-        num = random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-        t_num = [t, str(num)]
-        sala += random.choice(t_num)
+        t=random.choice(string.ascii_letters)
+        num=random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+        t_num=[t,str(num)]
+        sala+=random.choice(t_num)
     return sala
