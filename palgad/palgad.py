@@ -23,34 +23,27 @@ nimed=[]
 paroolid=[]
 
 while True:
-    print("\nValige tegevus:")
-    print("1. Registreerimine")
-    print("2. Autoriseerimine")
-    print("3. Nime või parooli muutmine")
-    print("4. Unustasin parooli taastamine")
-    print("5. Lõpetamine")
-
-    vastus = input("Sisestage valiku number: ")
-
-    if vastus==1:
+    print("1-Registreerimine\n2-Autoriseerimine\n3-Nime või parooli muutmine\n4-Unustasin parooli taastamine\n5-Lõpetamine\n")
+    vastus=input("Sisestage valiku number: ")
+    if vastus=="1":
         registreerimine(nimed, paroolid)
-    elif vastus==2:
-        nimi = input("Sisesta kasutajanimi: ")
-        parool = input("Sisesta parool: ")
+    elif vastus=="2":
+        nimi=input("Sisesta kasutajanimi: ")
+        parool=input("Sisesta parool: ")
         if nimi in nimed:
-            index = nimed.index(nimi)
-            if parool == paroolid[index]:
+            index=nimed.index(nimi)
+            if parool==paroolid[index]:
                 print("Autoriseerimine õnnestus!")
             else:
                 print("Vale parool!")
         else:
             print("Kasutajat ei leitud!")
-    elif vastus==3:
+    elif vastus=="3":
         pass
-    elif vastus==4:
+    elif vastus=="4":
         pass
-    elif vastus==5:
-        print("Programm lõpetatakse.")
+    elif vastus=="5":
+        print("Programm lõpetatakse")
         break
     else:
-        print("Vigane valik, palun valige uuesti.")
+        print("Vigane valik, palun valige uuesti")
