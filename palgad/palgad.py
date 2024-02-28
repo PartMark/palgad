@@ -1,4 +1,4 @@
-from module1 import *
+#from module1 import *
 #palgad=[1200,2500,750,395,1200]
 #inimesed=["A","B","C","D","E"]
 
@@ -18,9 +18,9 @@ from module1 import *
 #        inimesed,palgad=sorteerimine(inimesed,palgad)
 
 #Iseseisevtöö "Registreerimine ja autoriseerimine"
+from module1 import *
 nimed = []
 paroolid = []
-
 while True:
     print("\nValige tegevus:")
     print("1. Registreerimine")
@@ -29,11 +29,11 @@ while True:
     print("4. Unustasin parooli taastamine")
     print("5. Lõpetamine")
 
-    valik = input("Sisestage valiku number: ")
+    vastus = input("Sisestage valiku number: ")
 
-    if valik == "1":
+    if vastus==1:
         registreerimine(nimed, paroolid)
-    elif valik == "2":
+    elif vastus==2:
         nimi = input("Sisesta kasutajanimi: ")
         parool = input("Sisesta parool: ")
         if nimi in nimed:
@@ -44,12 +44,12 @@ while True:
                 print("Vale parool!")
         else:
             print("Kasutajat ei leitud!")
-    elif valik == "3":
+    elif vastus==3:
         pass
-    elif valik == "4":
+    elif vastus==4:
 
         pass
-    elif valik == "5":
+    elif vastus==5:
         print("Programm lõpetatakse.")
         break
     else:
